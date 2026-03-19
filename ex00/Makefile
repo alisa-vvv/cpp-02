@@ -14,7 +14,8 @@
 
 NAME	=	first_canonical
 
-CXXFILES	=	main.cpp
+CXXFILES	=	main.cpp\
+				Fixed.cpp
 
 OFILES	= $(addprefix $(BUILDDIR),$(CXXFILES:.cpp=.o))
 DEPFILES	= $(addprefix $(BUILDDIR),$(CXXFILES:.cpp=.d))

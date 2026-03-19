@@ -14,16 +14,17 @@ class Fixed {
 public:
 		Fixed();
 		Fixed(const Fixed &other);
-	// copy destr operator overload
+		Fixed &operator=(const Fixed &other);
 		~Fixed();
 
 		int	getRawBits(
 			void
 		) const;
+
 		void	setRawBits(
 			const int	raw
-		) const;
+		);
 private:
-	int					value;
-	static const int	fract_bits;
+	int					_value;
+	static const int	_fract_bits = 8;
 };
