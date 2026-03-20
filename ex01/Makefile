@@ -47,8 +47,8 @@ CC	= c++
 CPPFLAGS	= $(INCFLAGS) -MMD -MP
 
 INCFLAGS	= $(addprefix -I,$(INCLUDE))
-CFLAGS	= -Wall -Wextra -Werror
-#CFLAGS	= -Wall -Wextra -Werror -fsanitize=undefined
+#CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -fsanitize=undefined
 LDFLAGS	=
 INPUT	=
 
