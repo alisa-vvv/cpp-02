@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <fstream>
+
 class Fixed {
 public:
 		Fixed();
@@ -17,6 +19,7 @@ public:
 		Fixed(const float value);
 		Fixed(const Fixed &other);
 		Fixed &operator=(const Fixed &other);
+		void operator<<(std::ofstream& stream);
 		~Fixed();
 
 		int	getRawBits(
