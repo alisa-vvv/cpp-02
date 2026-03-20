@@ -10,17 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fstream>
+#include <ostream>
 
 class Fixed {
 public:
 		Fixed();
+		Fixed(const Fixed& other);
+		Fixed&	operator=(const Fixed& other);
+		~Fixed();
+
 		Fixed(const int value);
 		Fixed(const float value);
-		Fixed(const Fixed &other);
-		Fixed &operator=(const Fixed &other);
-		void operator<<(std::ofstream& stream);
-		~Fixed();
 
 		int	getRawBits(
 			void
@@ -40,3 +40,9 @@ private:
 	int					_fixed_point_value;
 	static const int	_fract_bits = 8;
 };
+
+std::ostream& operator<<(
+	std::ostream& stream,
+	const Fixed& thing
+);
+

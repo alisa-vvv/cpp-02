@@ -38,13 +38,13 @@ Fixed::Fixed(const float value) {
 
 
 // Deep copy?
-Fixed::Fixed(const Fixed &other) {
+Fixed::Fixed(const Fixed& other) {
 	std::cout << "Copy constructor called\n";
 	*this = other;
 }
 
 // Shallow copy?
-Fixed &Fixed::operator =(const Fixed &other) {
+Fixed& Fixed::operator =(const Fixed& other) {
 	std::cout << "Copy assignment operator called\n";
 	if (this != &other)
 		this->_fixed_point_value = other._fixed_point_value;
@@ -54,10 +54,12 @@ Fixed::~Fixed() {
 	std::cout << "Default destructor called\n";
 }
 
-void Fixed::operator<<(std::ofstream& stream) {
-	if (!stream.is_open())
-		return ;
-	stream << toFloat();
+std::ostream& operator<<(
+	std::ostream& stream,
+	const Fixed& thing
+) {
+	stream << thing.toFloat();
+	return (stream);
 }
 
 int	Fixed::getRawBits(

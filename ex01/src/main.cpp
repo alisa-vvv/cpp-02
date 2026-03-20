@@ -24,18 +24,6 @@ int	main(
 	const std::string	clr_grn = "\033[92m";
 	const std::string	clr_mag = "\033[95m";
 
-	//Fixed	passed_float(42.19f);
-	//Fixed	passed_int(42);
-
-	//std::cout << clr_cya << "Fixed passed_float:" << '\n' << clr_non;
-	//std::cout << passed_float.getRawBits() << std::endl;
-	//std::cout << clr_cya << "Fixed passed_int:" << '\n' << clr_non;
-	//std::cout << passed_int.getRawBits() << std::endl;
-	//std::cout << clr_cya << "passed_float to_float:" << '\n' << clr_non;
-	//std::cout << passed_float.toFloat() << std::endl;
-	//std::cout << clr_cya << "Fixed passed_int:" << '\n' << clr_non;
-	//std::cout << passed_int.getRawBits() << std::endl;
-
 	Fixed a;
 	Fixed const b( 10 );
 	Fixed const c( 42.42f );
