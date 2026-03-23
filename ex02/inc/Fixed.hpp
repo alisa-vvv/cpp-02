@@ -60,6 +60,30 @@ public:
 	Fixed	operator*(const Fixed &right) const;
 	Fixed	operator/(const Fixed &right) const;
 
+	// Increment and Decrement operators
+	Fixed&	operator++();
+	Fixed	operator++(int);
+	Fixed&	operator--();
+	Fixed	operator--(int);
+
+	// min/max
+	static Fixed&	min(
+		Fixed& val1,
+		Fixed& val2
+	);
+	static Fixed&	min(
+		const Fixed& val1,
+		const Fixed& val2
+	);
+	static Fixed&	max(
+		Fixed& val1,
+		Fixed& val2
+	);
+	static Fixed&	max(
+		const Fixed& val1,
+		const Fixed& val2
+	);
+
 private:
 	int					_fixed_point_value;
 	static const int	_fract_bits = 8;
