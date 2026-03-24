@@ -47,7 +47,7 @@ Fixed::Fixed(const Fixed& other) {
 }
 
 // Shallow copy?
-Fixed& Fixed::operator =(const Fixed& other) {
+Fixed&	Fixed::operator=(const Fixed& other) {
 	if (this != &other)
 		this->_fixed_point_value = other._fixed_point_value;
 	return (*this);
@@ -209,12 +209,9 @@ Fixed&	Fixed::min(
 	Fixed& val1,
 	Fixed& val2
 ) {
-	switch (val1 < val2) {
-		case 0:
-			return (val2);
-		default:
-			return (val1);
-	}
+	if (val1 < val2)
+		return (val1);
+	return (val2);
 }
 Fixed&	Fixed::min(
 	const Fixed& val1,
@@ -226,12 +223,9 @@ Fixed&	Fixed::max(
 	Fixed& val1,
 	Fixed& val2
 ) {
-	switch (val1 > val2) {
-		case 0:
-			return (val2);
-		default:
-			return (val1);
-	}
+	if (val1 > val2)
+		return (val1);
+	return (val2);
 }
 Fixed&	Fixed::max(
 	const Fixed& val1,
