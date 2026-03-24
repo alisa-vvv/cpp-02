@@ -234,6 +234,10 @@ int	main(
 	testDiv(" / ", "a", a, "no_mod", no_mod);
 	testDiv(" / ", "a", a, "neg_float", neg_float);
 	testDiv(" / ", "neg_int", neg_int, "neg_float", neg_float);
+	testDiv(" / ", "0", 0, "25", 25);
+	testDiv(" / ", "0", 0, "-25", -25);
+	testDiv(" / ", "0", 0, "25.7f", 25.7f);
+	testDiv(" / ", "0", 0, "-25.7f", -25.7f);
 	std::cout << '\n';
 
 	testAdd(" + ", "a", a, "b", b);
